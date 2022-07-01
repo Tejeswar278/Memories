@@ -1,6 +1,6 @@
 import postModel from "../models/postModel.js"
 
-export const getPost = async (req, res)=> {
+export const getPosts = async (req, res)=> {
     try {
         const postMessages = await postModel.find();
         res.status(200).json(postMessages)
