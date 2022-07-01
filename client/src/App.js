@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import './App.css';
-import {getPost} from "./actions/posts"
+import {getPosts} from "./actions/posts"
 import memories from "./images/memories.png"
 import Posts from "./components/Posts/Posts"
 import Form from "./components/forms/Form"
@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getPost)
+    dispatch(getPosts()) 
   }, [dispatch])
   return (
   
