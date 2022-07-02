@@ -4,9 +4,10 @@ import {getPosts} from "./actions/posts"
 import memories from "./images/memories.png"
 import Posts from "./components/Posts/Posts"
 import Form from "./components/forms/Form"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [currentId, setCrtId] = useState(null)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts()) 
@@ -23,7 +24,7 @@ function App() {
           <Posts></Posts>
         </div>
         <div>
-          <Form></Form>
+          <Form currentId={currentId}></Form>
         </div>
       </div>
     </div>
